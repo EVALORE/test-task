@@ -1,0 +1,17 @@
+.things {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.zone {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.group {
+  display: flex;
+}

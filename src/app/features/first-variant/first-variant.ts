@@ -8,11 +8,11 @@ import {
 import { Service } from '../../core/service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { AreaWithThings } from '../../core/models';
-import { Card } from '../../shared/card/card';
+import { Area } from '../../shared/area/area';
 
 @Component({
   selector: 'app-first-variant',
-  imports: [Card],
+  imports: [Area],
   templateUrl: './first-variant.html',
   styleUrl: './first-variant.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

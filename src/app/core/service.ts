@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { Api } from './api';
-import { forkJoin, map } from 'rxjs';
+import { forkJoin, map, shareReplay } from 'rxjs';
 import { AreaWithThings, Thing } from './models';
 
 @Injectable({
@@ -19,6 +19,7 @@ export class Service {
 
       return this.sortAreas(areasWithThings);
     }),
+    shareReplay(1),
   );
 
   private groupThingsByArea(things: Thing[]): Map<number, Thing[][]> {
