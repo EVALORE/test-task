@@ -1,0 +1,10 @@
+@if (!isThirst()) {
+  <div class="link"></div>
+}
+<div class="card">
+  <div class="default">{{ thing().defaultSku }}</div>
+  <div class="sku">{{ thing().sku }}</div>
+  @if (isThirst()) {
+    <div [class]="thing().status"></div>
+  }
+</div>

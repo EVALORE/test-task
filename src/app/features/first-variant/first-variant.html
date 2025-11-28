@@ -1,0 +1,14 @@
+@for (item of result; track item.area.areaId) {
+  <div class="zone">
+    <div class="title">{{ item.area.name }}</div>
+    <div class="things">
+      @for (group of item.thingGroups; track $index) {
+        <div class="group">
+          @for (thing of group; track thing.id) {
+            <app-card [thing]="thing" [isThirst]="$index === 0" />
+          }
+        </div>
+      }
+    </div>
+  </div>
+}
